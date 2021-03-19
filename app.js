@@ -1,6 +1,5 @@
 // importamos las librerias importantes
 const express = require('express')
-const cors = require('cors')
 require('dotenv').config();
 
 // importamos el router
@@ -19,8 +18,6 @@ const HOST = process.env.HOST || "0.0.0.0"
 // configuraciones para nuestro server
 app.use(json())
 app.use(urlencoded({ extended: false }))
-const corsOptions = { origin: '*', optionsSuccessStatus: 200 }
-app.use(cors(corsOptions))
 
 // indicamos que usaremos un router
 app.use(router)
